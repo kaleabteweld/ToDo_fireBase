@@ -122,6 +122,12 @@ body{
 
     border-radius: 11rem;
 }
+.main .fouces .view .todo .To_input{
+
+    border: 1px solid;
+    padding: 2px;
+    width: 69%;
+}
 .main .fouces .view .todo .back{
 
     display: flex;
@@ -129,14 +135,19 @@ body{
     
 
 }
-.main .fouces .view .todo .back > img{
+.main .fouces .view .todo .back  img{
 
     width: 25px;
     height: 25px;
 
     cursor: pointer;
 
-    margin: auto;
+    /* margin: auto; */
+    
+}
+.main .fouces .view .todo .back .edi{
+
+
 }
 
 .main .fouces .view #add_todo{
@@ -154,6 +165,25 @@ body{
     margin: auto;
     margin-top: 10px;
 }
+.main .fouces .view .new{
+
+
+    position: fixed;
+
+    width: 70vw;
+    height: 300px;
+
+    top: calc(132% - 500px);
+    left: calc(50% - 70vw/2);
+
+    background-color: darkcyan;
+
+    margin: auto;
+
+    border-radius: 10px 10px 0px 0;
+
+}
+
 
 
 
