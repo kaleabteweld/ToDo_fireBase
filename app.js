@@ -21,37 +21,40 @@
 function render(doc){
 
 
-  let temp = doc.data();
-
+  var temp = doc.data();
   var doc_id = doc['id'];
 
   var todo = $('.main .fouces .view');
-  
-
   var templet = `               
   <div class="todo" data='${doc_id}'>
     <input type="checkbox" name="done" id="done">
     <p id="TODO">${temp['ToDo']}</p>
       <div class="back">
         <img id="edit"  src="https://img.icons8.com/fluent/50/000000/edit.png"/>
+        <div id=\"edi\"  style=\"display: none;\">
+
+          <img id=\"save\" src=\"https://img.icons8.com/nolan/50/save.png\"/>
+          <img id=\"cancel\" src=\"https://img.icons8.com/nolan/64/cancel.png\"/>
+
+        </div>
         <img id="remove" src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/>
       </div>
   </div>`;
 
   templet = $(templet);
 
+    // done_percentage
   if(temp["done_percentage"] == "100"){
 
     $(templet).addClass("done");
     $(templet).find("#done").prop("checked", true);
   }
-
   $(todo).append(templet);
+
 
 
   var edit = $(".main .fouces .view .todo .back #edit");
   var del = $(".main .fouces .view .todo .back #remove");
-
 
  
   $('.main .fouces .view .todo > input[type="checkbox"]').click(function(){
@@ -76,7 +79,7 @@ function render(doc){
   }
 
 
-});
+  });
 
   $(edit).click(function (e) { 
 
@@ -93,22 +96,10 @@ function render(doc){
       $(data).replaceWith(input);
       $(".main .fouces .view .todo .To_input").css("height","auto");
       input.css("height","100%");
-
-      let save = $("<img id=\"save\" src=\"https://img.icons8.com/nolan/50/save.png\"/>");
-      let cancel = $("<img id=\"cancel\" src=\"https://img.icons8.com/nolan/64/cancel.png\"/>");
-      var contener = $("<div id=\"edi\"  style=\"display: none;\"></div>");
-
-      $(contener).append(save);
-      $(contener).append(cancel);
-
-      if(!($(contener).length)){
-
-          $(contener).insertBefore(del);
-      }
-    
       
       console.log($(this));
       console.log($(this).siblings("#edi"));
+      var contener = $(this).siblings("#edi");
 
       $($(this).siblings("#edi")).css("display","flex");
       $(this).css("display","none");
@@ -131,12 +122,8 @@ function render(doc){
         let p = $(`<p id=\"TODO\">${val}</p>`);
         $(input).replaceWith(p);
 
-        //let edit = $("<img id=\"edit\" src=\"https://img.icons8.com/fluent/50/000000/edit.png\"/>");
-
-        //$(contener).css("display","none");
-       // $(this).parent().find(".edi").css("display","none");
-        //console.log($(this));
         $(Temp).css("display","flex");
+        $(contener).css("display","none");
 
        // $(contener).replaceWith(Temp);
 
@@ -149,8 +136,8 @@ function render(doc){
 
         //let edit = $("<img id=\"edit\" src=\"https://img.icons8.com/fluent/50/000000/edit.png\"/>");
         //$(contener).replaceWith(Temp);
-        $(contener).css("display","none");
         $(Temp).css("display","flex");
+        $(contener).css("display","none");
 
       });
 
@@ -173,9 +160,10 @@ function render(doc){
     
   });
 
-  
 
 }
+
+
 function init_firebase(){
 
     console.log("start");
@@ -195,7 +183,11 @@ function init_firebase(){
 
             }else if(chage.type == "removed"){
 
-              $(`.main .fouces .view > .todo[data='${chage.doc.id}']`).remove();
+              //
+              $(`.main .fouces .view > .todo[data='${chage.doc.id}']`).fadeOut(500,function (){
+
+                  $(`.main .fouces .view > .todo[data='${chage.doc.id}']`).remove();
+              });
               
 
             }else if(chage.type == "modified"){
@@ -251,6 +243,8 @@ $(function(){
             .catch(function (error) {
                 console.log(error);
             });
+
+            $(".main .fouces .view #new #us_text").val(" ")
       
     });
 
