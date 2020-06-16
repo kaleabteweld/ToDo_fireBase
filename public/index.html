@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,87 +10,54 @@
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
 
-    
+<body>
 
     <div class="main">
 
         <div class="top">
-
             <p>TODO</p>
-
             <div class="user">
-                <img id="us_pic" src="https://img.icons8.com/nolan/100/user.png"/>
-                <!-- <p id="us_name"> name</p> -->
+                <img id="us_pic" src="https://img.icons8.com/nolan/100/user.png" />
             </div>
-
         </div>
-
+        
         <div class="fouces">
 
             <div class="view">
-
-               
-                <!-- <div class="todo">
-                    <input type="checkbox" name="done" id="done">
-                    <p id="TODO"> some data</p>
-
-                    <div class="back">
-
-                        <img id="edit" src="https://img.icons8.com/fluent/50/000000/edit.png"/>
-                        <img id="remove" src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/>
-
-                    </div>
-                </div>
-
-                <div class="todo">
-                    <input type="checkbox" name="done" id="done">
-                    <p id="TODO"> some data</p>
-
-                    <div class="back">
-
-                        <img src="https://img.icons8.com/fluent/50/000000/edit.png"/>
-                        <img src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/>
-
-                    </div>
-                </div> -->
-
-                <img id="add_todo" src="https://img.icons8.com/nolan/96/add.png"/>
+                <img id="add_todo" style="margin-bottom: 20px;" src="https://img.icons8.com/nolan/96/add.png" />
                 <div id="new">
-
-
-                    <textarea name="us_text" id="us_text" rows="10" placeholder="  Add your remainder here"></textarea>
-
+                    <textarea name="us_text" id="us_text" rows="10" placeholder=" Add your reminder here ...">
+                    </textarea>
                     <div class="Nav">
                         <button id="Save" class="btn btn-primary">Save</button>
                         <button id="cancel" class="btn btn-danger">cancel</button>
                     </div>
-
                 </div>
-                
             </div>
 
         </div>
-
     </div>
 
-
-
-    
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 
     <script src="app.js"></script>
     <script src="gui.js"></script>
 </body>
+
 </html>
