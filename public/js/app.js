@@ -1,22 +1,4 @@
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAiDXTCgKAZeQpMQbCLf4CJMcR38MY4zgA",
-    authDomain: "todo-ade05.firebaseapp.com",
-    databaseURL: "https://todo-ade05.firebaseio.com",
-    projectId: "todo-ade05",
-    storageBucket: "todo-ade05.appspot.com",
-    messagingSenderId: "806706913781",
-    appId: "1:806706913781:web:3983edae6a1adc884540bc",
-    measurementId: "G-L7BH727Q14"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-  const fireDB = firebase.firestore();
-  const user_id = "clVm04G0SVl8swX3jXaP";
-
-
+user_id = localStorage.getItem("user_id");
 
 function render(doc){
 
@@ -168,7 +150,7 @@ function init_firebase(){
 
     console.log("start");
   
-      fireDB.collection("TODO").where("user","==",user_id).orderBy("time").onSnapshot(sanp =>{
+      fireDB.collection("user_interction").doc(user_id).collection("ToDo").orderBy("time").onSnapshot(sanp =>{
   
         let Changes = sanp.docChanges();
         Changes.forEach(chage=>{
@@ -227,12 +209,12 @@ $(function(){
       let data = $(".main .fouces .view #new #us_text").val();
       let temp = new Date();
 
-      fireDB.collection("TODO").add(
+      
+      fireDB.collection("user_interction").doc(user_id).collection("ToDo").add(
         {
           ToDo:data,
           time:temp,
           done_percentage:"0",
-          user:user_id
         }).then(function (response) {
               
               $(".main .fouces .view #new").animate({
@@ -248,8 +230,24 @@ $(function(){
       
     });
 
+    var log_out = $(".main .top .user .dropleft .dropdown-menu #log_out");
+    $(log_out).click(function (e) { 
+      e.preventDefault();
+      fireAuth.signOut()
+          .then(function () {
+              // Sign-out successful.
+              console.log("Sign-out successful.");
+              localStorage.setItem("user_id"," ");
+              location.href="../public/index.html";
+              console.log("erre");
+
+          }).catch(function (error) {
+              // An error happened.
+          });
+    });
 
 
 })
 
   
+

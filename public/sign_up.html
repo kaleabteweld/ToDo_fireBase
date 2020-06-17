@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/sign.css">
+
+</head>
+<body>
+    
+
+    <div class="main">
+
+        <form id="form_sig" action = "../DropTalk/backEnd/sign_up.php" method="POST">
+
+            <div class="T">
+
+                <div class="form-group">
+                    <label for="name">your full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="name">
+                    <div id="email_id" class="invalid-feedback">
+                        <p>
+                            Enter your Name
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="us_name">User Name</label>
+                    <input type="text" class="form-control" id="us_name" name="us_name" placeholder="User Name">
+                    <div class="invalid-feedback">
+                        <p>
+                            User Name taken, plese try agen
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="T">
+
+                <div class="form-group">
+                    <label for="emaill">Email</label>
+                    <input type="text" class="form-control" id="emaill" name="emaill" placeholder="email@example.com">
+                    <div class="invalid-feedback">
+                        <p>
+                            check your Email
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phon">Phon Number</label>
+                    <input type="number" class="form-control" id="phon" name="phon" placeholder="+251.....">
+                    <div class="invalid-feedback">
+                        <p>
+                            check your Phone Number
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="passs">password</label>
+                <input type="password" class="form-control" id="passs" name="pass" placeholder="*******">
+                <div class="invalid-feedback">
+                    <p>
+                        check your password, Must Be less Than Or Equal 8 Charcter's
+                    </p>
+                </div>
+            </div>
+
+            <button id="posts" type="submit" value="submit" style="border-radius: 11rem;" class="btn btn-success"> sign In</button>
+            <br>
+
+
+        </form> 
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="js/fire_base_init.js"></script>
+    <script src="js/fire_base_auto.js"></script>
+
+    <script src="js/Sign.js"></script>
+</body>
+</html>

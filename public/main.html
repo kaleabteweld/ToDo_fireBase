@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+
+    <script>
+
+        if(localStorage.getItem("user_id") == " "){
+            location.href="../public/index.html";
+        }
+    </script>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    
+
+    <div class="main">
+
+        <div class="top">
+
+            <p>TODO</p>
+
+            <div class="user">
+                
+                <!-- <p id="us_name"> name</p> -->
+
+                <div class="dropleft">
+                    <img id="us_pic" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://img.icons8.com/nolan/100/user.png"/>
+                    <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
+                    </button> -->
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+                      <button class="dropdown-item btn btn-primary">Settings</button>
+                      <button id="log_out" class="dropdown-item btn btn-primary">Log Out</button>
+                    </div>
+                  </div>
+
+            </div>
+
+        </div>
+
+        <div class="fouces">
+
+            <div class="view">
+
+               
+                <!-- <div class="todo">
+                    <input type="checkbox" name="done" id="done">
+                    <p id="TODO"> some data</p>
+
+                    <div class="back">
+
+                        <img id="edit" src="https://img.icons8.com/fluent/50/000000/edit.png"/>
+                        <img id="remove" src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/>
+
+                    </div>
+                </div>
+
+                <div class="todo">
+                    <input type="checkbox" name="done" id="done">
+                    <p id="TODO"> some data</p>
+
+                    <div class="back">
+
+                        <img src="https://img.icons8.com/fluent/50/000000/edit.png"/>
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/>
+
+                    </div>
+                </div> -->
+
+                <img id="add_todo" src="https://img.icons8.com/nolan/96/add.png"/>
+                <div id="new">
+
+
+                    <textarea name="us_text" id="us_text" rows="10" placeholder="  Add your remainder here"></textarea>
+
+                    <div class="Nav">
+                        <button id="Save" class="btn btn-primary">Save</button>
+                        <button id="cancel" class="btn btn-danger">cancel</button>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="js/fire_base_init.js"></script>
+    <script src="js/fire_base_auto.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/gui.js"></script>
+</body>
+</html>
