@@ -5,65 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/logIn.css">
+    <link rel="stylesheet" href="assets/custom/css/logIn.css">
     <title>Log in</title>
 </head>
+
 <body>
-    
 
-    <div class="main">
+    <div class="container-fluid my-auto">
+        <div class="row">
+            <div class="col-sm-8 offset-2">
+                <form id="form" method="post" action="../DropTalk/backEnd/log_in.php" class="mt-5 mx-5">
 
-        <form id="form"  action = "../DropTalk/backEnd/log_in.php" method="POST">  
-                
-                
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" name = "email" class="form-control" id="email" placeholder="email@example.com">
-                <div id="error_email" class="invalid-feedback">
-                    <p>
-                        check your Email
-                    </p>
-                </div>
+                    <div class="form-group text-white">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" class="form-control" id="email" placeholder="email@example.com">
+                        <div id="error_email" class="invalid-feedback">
+                            <p>
+                                Check your Email
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-white">
+                        <label for="pass">Password</label>
+                        <input type="password" name="pass" class="form-control" id="pass" placeholder="*******">
+                        <div id="error_pass" class="invalid-feedback">
+                            <p>
+                                Check your password
+                            </p>
+                        </div>
+                    </div>
+
+                    <button id="post" value="submit" class="btn btn-outline-success" type="button">Log In</button>
+                    <a name="" id="" class="btn btn-outline-primary" href="sign_up.html" role="button">Sign Up</a>
+
+                </form>
             </div>
-    
-            <div class="form-group">
-                <label for="pass">password</label>
-                <input type="password" name = "pass" class="form-control" id="pass" placeholder="*******">
-                <div id="error_pass" class="invalid-feedback">
-                    <p>
-                        check your password
-                    </p>
-                </div>
-            </div>
-    
-    
-            <button id="post" type="submit" value = "submit" style="border-radius: 11rem; margin-top: 30px;" class="btn btn-success"> Log In</button>
-            <a style="border-radius: 11rem; margin-top: 30px;" class="btn btn btn-primary" href="sign_up.html">Sign Up</a>
-    
-    
-        </form>  
-
+        </div>
+        
     </div>
 
 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="src/fire_base_init.js"></script>
+    <script src="src/fire_base_auto.js"></script>
 
-
-    <script src="js/fire_base_init.js"></script>
-    <script src="js/fire_base_auto.js"></script>
-
-    <script src="js/LogIn.js"></script>
+    <script src="src/LogIn.js"></script>
 
 </body>
 

@@ -1,26 +1,23 @@
-body{
+body {
 
     height: 100vh;
     margin: 0;
-
     display: flex;
     justify-content: center;
-
-    background-image: url('/img/black-and-white-photography-of-sand-2387819.jpg');
-    /* background-image: url("https://todo-ade05.web.app/img/black-and-white-photography-of-sand-2387819.jpg"); */
+    background-image: url('./../../images/black-and-white-photography-of-sand-2387819.jpg');
     background-size: 100% 100%;
     background-position: center;
 
 }
 
 
-.main{
+/* .main {
 
-    
+
     margin-top: auto;
     margin-bottom: auto;
 
-    /* background: aqua; */
+
     height: 46vh;
     width: 46vw;
     overflow-y: scroll;
@@ -30,10 +27,11 @@ body{
     padding: 10px;
 
     box-shadow: 10px 5px 5px 10px rgba(0, 0, 0, .5),
-                -10px -5px 5px 10px rgba(0, 0, 0, .5);
-    
-}
-@media all and (max-width: 500px) { 
+        -10px -5px 5px 10px rgba(0, 0, 0, .5);
+
+} */
+
+/* @media all and (max-width: 500px) { 
 
     body{
 
@@ -44,12 +42,12 @@ body{
         width: 100% !important;
     }
 
-}
+} */
 
 
 
 /* form */
-.main #form{
+/* .main #form{
 
     display: flex;
     flex-direction: column;
@@ -72,23 +70,23 @@ body{
     border-radius: 11rem;   
     background-color: #1e1e1e !important;
     color: #2E8fa2 !important;
-}
+} */
 
-
+/* 
 .main #other{
 
     display: flex;
     justify-content: space-evenly;
-}
+} */
 
 
 /* other */
 
-.main #form  > .form-group .invalid-feedback > p{
+/* .main #form  > .form-group .invalid-feedback > p{
     margin: 0px;
     font-weight: bolder;
 }
 .main #form .T > .form-group .invalid-feedback > p{
     margin: 0px;
     font-weight: bolder;
-}
+} */
