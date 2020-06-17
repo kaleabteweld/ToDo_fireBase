@@ -238,8 +238,11 @@ $(function(){
               // Sign-out successful.
               console.log("Sign-out successful.");
               localStorage.setItem("user_id"," ");
-              location.href="../public/index.html";
-              console.log("erre");
+
+              window.location.replace("index.html");
+
+              
+              // console.log("erre");
 
           }).catch(function (error) {
               // An error happened.

@@ -80,7 +80,7 @@ $(function (){
                     
                     localStorage.setItem("user_id",id);
 
-                    location.href="../public/main.html";
+                    window.location.replace("Main.html");
                     console.log("erre");
         
                 }).catch(function (error) {

@@ -43,8 +43,10 @@ $(function (){
                 localStorage.setItem("user_id",response.user.uid)
                 //console.log(user_id);
 
-                location.href="../public/main.html";
-                console.log("erre");
+                //location.href="../main.html";
+                window.location.replace("Main.html");
+
+                console.log("erre");    
                 
 
             })
