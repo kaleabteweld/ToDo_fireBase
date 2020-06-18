@@ -3,13 +3,13 @@ $(function (){
 
 
     
-    var email = $(".main #form .form-group #email");
+    var email = $(".container-fluid .row #form .form-group #email");
     var email_error = email.siblings("#error_email");
 
-    var password = $(".main #form .form-group #pass");
+    var password = $(".container-fluid .row #form .form-group #pass");
     var password_error = password.siblings("#error_pass");
 
-    let  post =  $(".main #form  #post");
+    let  post =  $(".container-fluid .row #form  #post");
 
     $(post).click(function (e) { 
 
@@ -44,7 +44,7 @@ $(function (){
                 //console.log(user_id);
 
                 //location.href="../main.html";
-                window.location.replace("Main.html");
+                window.location.replace("main.html");
 
                 console.log("erre");    
                 

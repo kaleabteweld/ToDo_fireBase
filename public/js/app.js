@@ -14,10 +14,8 @@ function render(doc){
       <div class="back">
         <img id="edit"  src="https://img.icons8.com/fluent/50/000000/edit.png"/>
         <div id=\"edi\"  style=\"display: none;\">
-
           <img id=\"save\" src=\"https://img.icons8.com/nolan/50/save.png\"/>
           <img id=\"cancel\" src=\"https://img.icons8.com/nolan/64/cancel.png\"/>
-
         </div>
         <img id="remove" src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/>
       </div>
@@ -45,7 +43,7 @@ function render(doc){
 
     if($(this).is(":checked")){
 
-      fireDB.collection("TODO").doc(doc_id)
+      fireDB.collection("user_interction").doc(user_id).collection("ToDo").doc(doc_id)
       .update({
   
         done_percentage:"100"
@@ -53,7 +51,7 @@ function render(doc){
   }
   else if($(this).is(":not(:checked)")){
 
-    fireDB.collection("TODO").doc(doc_id)
+    fireDB.collection("user_interction").doc(user_id).collection("ToDo").doc(doc_id)
     .update({
 
       done_percentage:"0"
@@ -95,7 +93,7 @@ function render(doc){
         e.preventDefault();
         console.log("updata: "+doc_id);
 
-        fireDB.collection("TODO").doc(doc_id)
+        fireDB.collection("user_interction").doc(user_id).collection("ToDo").doc(doc_id)
         .update({
 
           ToDo:$(input).val()
@@ -137,7 +135,7 @@ function render(doc){
     console.log(doc_id);
     
     let id = $(this).parent().parent().attr("data");
-    fireDB.collection("TODO").doc(id).delete();
+    fireDB.collection("user_interction").doc(user_id).collection("ToDo").doc(id).delete();
 
     
   });
@@ -159,6 +157,7 @@ function init_firebase(){
             console.log(chage.type);
             console.log(chage.doc.id);
             
+            $(".main .fouces .view .loader-wrapper").fadeOut("slow");
             if(chage.type == "added"){
               
                 render(chage.doc);
@@ -251,6 +250,3 @@ $(function(){
 
 
 })
-
-  
-
